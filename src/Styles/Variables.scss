@@ -1,0 +1,60 @@
+$primary-color: white;
+$color--dark: white;
+
+
+
+@mixin h6style {
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $color--dark;
+};
+@mixin h5style {
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $color--dark;
+};
+@mixin h4style {
+    font-family: Nunito Sans;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 33px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $color--dark;
+};
+@mixin h4style300 {
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $color--dark;
+};
+@mixin h4style600 {
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;   
+    color: $color--dark;
+
+};
+@mixin h4style800 {
+    font-family: Nunito Sans;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: $color--dark;
+
+};

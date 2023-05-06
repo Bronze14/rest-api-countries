@@ -1,0 +1,45 @@
+@import 'Variables';
+
+
+
+
+
+.flag--Cart{
+    margin-top: 75px;
+    width: 264px;
+    background-color: #2B3844;
+    color: white;
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img{
+        width: 264px;
+        height: 160px;
+        object-fit:inherit;
+    } 
+    p{
+        @include h4style800;
+        padding-left: 24px;
+    }
+    section{
+        padding-bottom: 38px;
+    }
+    span{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 16px;
+        padding-left: 24px;
+        margin-bottom: 8px;
+
+        h6{
+            @include h4style300;
+            margin-left: 4px;
+        }
+        h5{
+            @include h4style600;
+        }
+    }
+}

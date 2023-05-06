@@ -1,0 +1,87 @@
+@import 'Variables';
+
+.Home--Container{
+    .tool--Search{
+        margin-top: 48px;
+        display: flex; 
+        justify-content: space-between;
+        .search--Input{
+            display: flex;
+            svg{
+                width: 20px;
+                position: absolute;
+                margin-left: 340px;
+                margin-top: 18px;
+                cursor: pointer;
+            }
+            input{
+                border-radius: 5px;
+                margin-left: 310px;
+                width: 480px;
+                height: 56px;
+                background-color: #2B3844;
+                border: none;
+                padding-left: 74px;
+                @include h5style;
+
+            } 
+        }
+        .filter--Btn{
+            .menu-btn{
+                border-radius: 5px;
+                margin-right: 367px;
+                width: 200px;
+                height: 56px;
+                background-color: #2B3844;
+                border: none;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                
+                h4{
+                    margin-left: 24px;
+                    @include h5style;
+                    margin-right: 30px;
+                }
+                svg{
+                    width: 22px;
+                    fill: white;
+                    cursor: pointer;
+                    
+                }
+            }
+            .menu-bar{
+                width: 200px;
+                height: 205px;
+                margin-top: 5px;
+                background-color: #2B3844;
+                position: absolute;
+                border-radius: 5px;
+                padding-top: 8px;
+                button{
+                    display: block !important;
+                    border: none;
+                    background-color: inherit;
+                    color: white;
+                    margin-top: 8px;
+                    margin-left: 24px;
+                    @include h5style;
+                    cursor: pointer;
+
+                }
+            }
+        }
+    }
+
+    .flags--Container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 1280px;
+        margin: auto;
+      
+    
+    }
+
+
+
+}
