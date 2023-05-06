@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import '../Styles/Header.scss'
-import '../Styles/Variables.scss'
+import '../styles/Header.scss'
+import '../styles/Variables.scss'
 import { useDispatch, useSelector } from "react-redux"
 import { darkMode } from "../cart/cartSlice"  
 

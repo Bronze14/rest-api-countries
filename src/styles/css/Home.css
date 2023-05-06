@@ -1,0 +1,89 @@
+.Home--Container .tool--Search {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.Home--Container .tool--Search .search--Input {
+  display: flex;
+}
+.Home--Container .tool--Search .search--Input svg {
+  width: 20px;
+  position: absolute;
+  margin-left: 340px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+.Home--Container .tool--Search .search--Input input {
+  border-radius: 5px;
+  margin-left: 310px;
+  width: 480px;
+  height: 56px;
+  background-color: #2B3844;
+  border: none;
+  padding-left: 74px;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+}
+.Home--Container .tool--Search .filter--Btn .menu-btn {
+  border-radius: 5px;
+  margin-right: 367px;
+  width: 200px;
+  height: 56px;
+  background-color: #2B3844;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.Home--Container .tool--Search .filter--Btn .menu-btn h4 {
+  margin-left: 24px;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  margin-right: 30px;
+}
+.Home--Container .tool--Search .filter--Btn .menu-btn svg {
+  width: 22px;
+  fill: white;
+  cursor: pointer;
+}
+.Home--Container .tool--Search .filter--Btn .menu-bar {
+  width: 200px;
+  height: 205px;
+  margin-top: 5px;
+  background-color: #2B3844;
+  position: absolute;
+  border-radius: 5px;
+  padding-top: 8px;
+}
+.Home--Container .tool--Search .filter--Btn .menu-bar button {
+  display: block !important;
+  border: none;
+  background-color: inherit;
+  color: white;
+  margin-top: 8px;
+  margin-left: 24px;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+}
+.Home--Container .flags--Container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 1280px;
+  margin: auto;
+}/*# sourceMappingURL=Home.css.map */

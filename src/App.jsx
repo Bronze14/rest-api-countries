@@ -9,7 +9,7 @@ import Layout from './Components/Layout'
 import Home from './Components/Home'
 import FlagsSite from './Components/FlagsSite'
 import { useSelector } from "react-redux"
-
+import './styles/main.scss'
 
 function App() {
   const { dark } = useSelector ((state) => state.cart)

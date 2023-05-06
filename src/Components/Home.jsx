@@ -2,7 +2,7 @@ import React from 'react'
 import Flags from './Flags.jsx'
 import { useState, useEffect } from 'react';
 import data from '../data.json'
-import '../Styles/Home.scss'
+import '../styles/Home.scss'
 import { useSelector } from "react-redux"
 
 

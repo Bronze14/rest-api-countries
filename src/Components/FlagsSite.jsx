@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import data from '../data.json'
-import '../Styles/FlagsSite.scss'
+import '../styles/FlagsSite.scss'
 import { Link, useLocation, useLoaderData, defer, Await } from "react-router-dom"
 import { useSelector } from "react-redux"
 

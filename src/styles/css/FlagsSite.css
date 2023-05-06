@@ -1,0 +1,121 @@
+.Flags--Site--Container {
+  box-sizing: border-box;
+  margin-left: 300px;
+}
+.Flags--Site--Container .back-button {
+  width: 136px;
+  height: 40px;
+  background-color: #2B3844;
+  border-radius: 6px;
+  margin-top: 80px;
+  margin-left: 80px;
+  text-decoration: none;
+  color: white;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  font-size: 16px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Flags--Site--Container .back-button span {
+  margin-left: 10px;
+}
+.Flags--Site--Container .border--Bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  font-size: 16px !important;
+  margin-top: 70px;
+}
+.Flags--Site--Container .border--Bar .border-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: #2B3844;
+  width: 120px !important;
+  margin-right: 5px;
+  margin-top: 5px;
+  height: 50px;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  font-size: 14px !important;
+}
+.Flags--Site--Container .flags--Site {
+  margin-top: 80px;
+  display: flex;
+  color: #FFFFFF;
+}
+.Flags--Site--Container .flags--Site img {
+  width: 560px;
+  height: 401px;
+  -o-object-fit: inherit;
+     object-fit: inherit;
+  margin-left: 80px;
+  border-radius: 10px;
+}
+.Flags--Site--Container .flags--Site .body--flags--Site {
+  margin-left: 120px;
+}
+.Flags--Site--Container .flags--Site .body--flags--Site h2 {
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: white;
+  font-size: 32px !important;
+  line-height: 44px !important;
+}
+.Flags--Site--Container .flags--Site .body--flags--Site div {
+  display: flex;
+  width: 574px;
+}
+.Flags--Site--Container .flags--Site .body--flags--Site div section span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+}
+.Flags--Site--Container .flags--Site .body--flags--Site div section span h5 {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  font-family: Nunito Sans;
+  font-size: 16px !important;
+  line-height: 32px !important;
+}
+.Flags--Site--Container .flags--Site .body--flags--Site div section span h6 {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  line-height: 16px !important;
+  margin-left: 6px;
+}/*# sourceMappingURL=FlagsSite.css.map */
