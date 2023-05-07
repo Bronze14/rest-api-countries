@@ -5,10 +5,11 @@
 
 
 .flag--Cart{
-    margin-top: 75px;
     width: 264px;
     background-color: #2B3844;
     color: white;
+    margin: auto;
+    margin-top: 75px;
     a{
         text-decoration: none;
         color: inherit;
@@ -41,5 +42,13 @@
         h5{
             @include h4style600;
         }
+    }
+}
+@media screen and (max-width: 800px) {
+    .flag--Cart{
+        margin: auto;
+        margin-top: 20px;
+
+
     }
 }

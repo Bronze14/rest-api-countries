@@ -30,7 +30,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   font-family: Nunito Sans;
   font-size: 14px;
   font-weight: 400;
@@ -42,15 +42,6 @@
   margin-top: 70px;
 }
 .Flags--Site--Container .border--Bar .border-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  background-color: #2B3844;
-  width: 120px !important;
-  margin-right: 5px;
-  margin-top: 5px;
-  height: 50px;
   font-family: Nunito Sans;
   font-size: 14px;
   font-weight: 300;
@@ -58,6 +49,15 @@
   letter-spacing: 0px;
   text-align: left;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  background-color: #2B3844;
+  width: 100px !important;
+  margin-right: 5px;
+  margin-top: 5px;
+  height: 50px;
   font-size: 14px !important;
 }
 .Flags--Site--Container .flags--Site {
@@ -118,4 +118,128 @@
   color: white;
   line-height: 16px !important;
   margin-left: 6px;
+}
+
+@media screen and (max-width: 800px) {
+  .Flags--Site--Container {
+    box-sizing: border-box;
+    margin-left: 28px;
+  }
+  .Flags--Site--Container .back-button {
+    width: 104px;
+    height: 32px;
+    background-color: #2B3844;
+    border-radius: 6px;
+    margin-top: 80px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: white;
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+    font-size: 16px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Flags--Site--Container .back-button span {
+    margin-left: 10px;
+  }
+  .Flags--Site--Container .border--Bar {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+    font-size: 16px !important;
+    margin-top: 30px;
+  }
+  .Flags--Site--Container .border--Bar .border-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0;
+    background-color: #2B3844;
+    width: 110px !important;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 50px;
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+    font-size: 14px !important;
+  }
+  .Flags--Site--Container .flags--Site {
+    margin-top: 80px;
+    display: block;
+    color: #FFFFFF;
+  }
+  .Flags--Site--Container .flags--Site img {
+    width: 330px;
+    height: 229px;
+    -o-object-fit: inherit;
+       object-fit: inherit;
+    margin-left: 0px;
+    border-radius: 10px;
+  }
+  .Flags--Site--Container .flags--Site .body--flags--Site {
+    margin-left: 0px;
+  }
+  .Flags--Site--Container .flags--Site .body--flags--Site h2 {
+    font-family: Nunito Sans;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: white;
+    font-size: 32px !important;
+    line-height: 44px !important;
+  }
+  .Flags--Site--Container .flags--Site .body--flags--Site div {
+    display: block;
+    width: 200px;
+  }
+  .Flags--Site--Container .flags--Site .body--flags--Site div section span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+  }
+  .Flags--Site--Container .flags--Site .body--flags--Site div section span h5 {
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+    font-family: Nunito Sans;
+    font-size: 16px !important;
+    line-height: 32px !important;
+  }
+  .Flags--Site--Container .flags--Site .body--flags--Site div section span h6 {
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+    line-height: 16px !important;
+    margin-left: 6px;
+  }
 }/*# sourceMappingURL=FlagsSite.css.map */

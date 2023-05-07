@@ -37,4 +37,29 @@ header span svg {
   margin-right: 10px;
   width: 20px;
   fill: white;
+}
+
+@media screen and (max-width: 1200px) {
+  header a {
+    text-decoration: none;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  header span {
+    display: flex;
+    align-items: center;
+  }
+  header span h4 {
+    justify-content: flex-end;
+    margin-right: 0px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  header span svg {
+    margin-right: 10px;
+    width: 20px;
+    fill: white;
+  }
 }/*# sourceMappingURL=Header.css.map */
