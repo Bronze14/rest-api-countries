@@ -21,6 +21,7 @@ export default function Header(prps) {
             stroke-width="1.5"
             stroke="currentColor"
             className="w-6 h-6"
+            style={{cursor:'pointer'}}
           >
             <path
               stroke-linecap="round"
