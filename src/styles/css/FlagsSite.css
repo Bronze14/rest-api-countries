@@ -1,6 +1,7 @@
 .Flags--Site--Container {
   box-sizing: border-box;
-  margin-left: 300px;
+  margin: auto !important;
+  width: 1050px;
 }
 .Flags--Site--Container .back-button {
   width: 136px;
@@ -8,7 +9,7 @@
   background-color: #2B3844;
   border-radius: 6px;
   margin-top: 80px;
-  margin-left: 80px;
+  margin-left: 0px;
   text-decoration: none;
   color: white;
   font-family: Nunito Sans;
@@ -55,7 +56,7 @@
   text-align: center !important;
   background-color: #2B3844;
   width: 100px !important;
-  margin-right: 5px;
+  margin-right: 0px;
   margin-top: 5px;
   height: 50px;
   font-size: 14px !important;
@@ -70,11 +71,11 @@
   height: 401px;
   -o-object-fit: inherit;
      object-fit: inherit;
-  margin-left: 80px;
+  margin-left: 0px;
   border-radius: 10px;
 }
 .Flags--Site--Container .flags--Site .body--flags--Site {
-  margin-left: 120px;
+  margin-left: 30px;
 }
 .Flags--Site--Container .flags--Site .body--flags--Site h2 {
   font-family: Nunito Sans;
@@ -120,10 +121,11 @@
   margin-left: 6px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1250px) {
   .Flags--Site--Container {
     box-sizing: border-box;
-    margin-left: 28px;
+    margin: auto !important;
+    width: 340px;
   }
   .Flags--Site--Container .back-button {
     width: 104px;

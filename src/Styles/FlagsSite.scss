@@ -2,14 +2,15 @@
 
 .Flags--Site--Container{
     box-sizing: border-box;
-    margin-left: 300px;
+    margin: auto !important;
+    width: 1050px;
     .back-button{
         width: 136px;
         height: 40px;
         background-color: #2B3844;
         border-radius: 6px;
         margin-top: 80px;
-        margin-left: 80px;
+        margin-left: 0px;
         text-decoration: none;
         color: white;
         @include h4style300;
@@ -39,7 +40,7 @@
             
             background-color: #2B3844;
             width: 100px !important;
-            margin-right: 5px;
+            margin-right: 0px;
             margin-top: 5px;
             height: 50px;
             
@@ -54,11 +55,11 @@
             width: 560px;
             height: 401px;
             object-fit:inherit;
-            margin-left: 80px;
+            margin-left: 0px;
             border-radius: 10px;
         }
         .body--flags--Site{
-            margin-left: 120px;
+            margin-left: 30px;
             h2{
                 @include h4style800;
                 font-size: 32px !important;
@@ -93,10 +94,11 @@
         }
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1250px) {
     .Flags--Site--Container{
         box-sizing: border-box;
-        margin-left: 28px;
+        margin: auto !important;
+        width: 340px;
         .back-button{
             width: 104px;
             height: 32px;
