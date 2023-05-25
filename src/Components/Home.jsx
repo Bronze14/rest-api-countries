@@ -3,7 +3,7 @@ import Flags from './Flags.jsx'
 import { useState, useEffect } from 'react';
 import data from '../data.json'
 import { useSelector } from "react-redux"
-
+import '../styles/Home.scss'
 
 
 

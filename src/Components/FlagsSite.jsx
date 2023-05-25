@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import data from '../data.json'
 import { Link, useLocation, useLoaderData } from "react-router-dom"
 import { useSelector } from "react-redux"
+import '../styles/FlagsSite.scss'
 
 
 function FlagsSite({ match }) {
