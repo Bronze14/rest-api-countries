@@ -1,8 +1,8 @@
-import React from 'react'
-import '../styles/Flags.scss'
+import React from 'react';
+import '../Styles/Flags.scss';
 
 import { NavLink  } from 'react-router-dom';
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 
 
 

@@ -1,5 +1,5 @@
 import React from "react"
-import '../styles/Header.scss'
+import '../Styles/Header.scss'
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { darkMode } from "../cart/cartSlice"  

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Home.scss'
+import '../Styles/Home.scss'
 import Flags from './Flags.jsx'
 import { useState, useEffect, useRef } from 'react';
 import data from '../data.json'
