@@ -1,6 +1,6 @@
 import React from 'react'
 import Flags from './Flags.jsx'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import data from '../data.json'
 import { useSelector } from "react-redux"
 import '../styles/Home.scss'
@@ -11,12 +11,30 @@ function Home() {
     const [dataFlag, setDataFlag] = useState(null);
     const [selectedRegion, setSelectedRegion] = React.useState(null);
     const [searchValue, setSearchValue] = useState('');
-    const {dark} = useSelector ((state) => state.cart)
-    const [visible, setVisible] = useState(false)
+    const {dark} = useSelector ((state) => state.cart);
+    const [visible, setVisible] = useState(false);
+    const cartRef = useRef(null);
+    const avatarRef = useRef(null);
     useEffect(() => {
         setDataFlag(data);
     }, []);
-  
+    useEffect(() => {
+        function handleClickOutside(event) {
+          if (
+            cartRef.current &&
+            !cartRef.current.contains(event.target) &&
+            !avatarRef.current.contains(event.target)
+          ) {
+            setVisible(false);
+          }
+        }
+    
+        document.addEventListener('mousedown', handleClickOutside);
+    
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, []);
     if (!dataFlag) {
         return (
           <div style={{
@@ -31,6 +49,7 @@ function Home() {
           </div>
         )
     }
+
     function handleChange(){
         setVisible(item=>!item)
     }
@@ -63,7 +82,7 @@ function Home() {
                     />
                 </div>
 
-                <div className='filter--Btn' >
+                <div className='filter--Btn' ref={avatarRef}>
                         <button  className="menu-btn" onClick={handleChange} style={dark ? {backgroundColor:'white'} : null}>
                             <h4 style={dark ? {color:'black'} : null}>
                                 
@@ -75,7 +94,7 @@ function Home() {
 
                         </button>
                         { visible ? (
-                            <div class="menu-bar" style={dark ? {backgroundColor:'white'} : null}>
+                            <div class="menu-bar" ref={cartRef} style={dark ? {backgroundColor:'white'} : null}>
                                 <button class="menu-item" onClick={() => {
                                     handleRegionSelect('');
                                     setSelectedRegion(null);

@@ -22,7 +22,10 @@
     } 
     p{
         @include h4style800;
-        padding-left: 24px;
+        margin-top: 20px;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        padding-left: 24px; 
     }
     section{
         padding-bottom: 38px;
