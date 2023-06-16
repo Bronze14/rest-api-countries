@@ -2,7 +2,6 @@ import React from 'react'
 import '../Styles/Home.scss'
 import Flags from './Flags.jsx'
 import { useState, useEffect, useRef } from 'react';
-import data from '../data.json'
 import { useSelector } from "react-redux"
 
 
@@ -17,9 +16,21 @@ function Home() {
     const cartRef = useRef(null);
     const avatarRef = useRef(null);
     useEffect(() => {
-        setDataFlag(data);
-    }, []);
-    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags,capital,languages,cca3');
+          const jsonData = await response.json();
+          setDataFlag(jsonData);
+          
+        } catch (error) {
+          console.error('Błąd:', error);
+        }
+      };
+
+      fetchData();
+  }, []);
+  if(dataFlag) console.log(dataFlag)
+  useEffect(() => {
         function handleClickOutside(event) {
           if (
             cartRef.current &&
@@ -57,14 +68,13 @@ function Home() {
     function handleRegionSelect(region) {
         setSelectedRegion(region);
     }
-    const filteredCountries = data.filter(country =>
-        country.name.toLowerCase().includes(searchValue.toLowerCase())
-      );
+    const filteredCountries = dataFlag.filter(country =>
+        country.name.common.toLowerCase().includes(searchValue.toLowerCase())
+    );
       
     const handleSearchChange = e => {
         setSearchValue(e.target.value);
     }
-    
     return (
         <div className='Home--Container' style={dark ? {backgroundColor:'white'} : null}>
             <section className='tool--Search'>
@@ -111,14 +121,14 @@ function Home() {
                         ) : null }
                 </div>
             </section>
-            <div className='flags--Container'>
+            <div className='flags--Container'>  
                 {filteredCountries.map((country, index) => {
                 if (selectedRegion === null || selectedRegion === country.region) {
                     return (
                     <Flags
-                        key={country.alpha3Code}
-                        id={country.alpha3Code}
-                        name={country.name}
+                        key={country.cca3}
+                        id={country.cca3}
+                        name={country.name.common}
                         population={country.population}
                         region={country.region}
                         capital={country.capital}
