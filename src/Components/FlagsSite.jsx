@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import '../Styles/FlagsSite.scss';
-import { useParams } from 'react-router-dom';
+import { json, useParams } from 'react-router-dom';
 import { Link, useLocation, useLoaderData } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -14,24 +14,24 @@ function FlagsSite({ match }) {
   const search = location.state?.search || "";
   const type = location.state?.type || "all";
   const [country, setCountry] = useState(null)
-  const [countryData, setCountryData] = useState(null)
   const {dark} = useSelector ((state) => state.cart)
   useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch(`https://restcountries.com/v3.1/alpha/${id}?fields=name,population,region,subregion,capital,tld,currencies,languages,flags`);
+          const response = await fetch(`https://restcountries.com/v3.1/alpha/${id}?fields=name,population,region,subregion,capital,tld,currencies,languages,flags,borders,official`);
           const jsonData = await response.json();
-          setCountry(jsonData);
-          setCountryData({
+          setCountry({
               name: jsonData.name.common,
+              nameOfficial: jsonData.name.official,
               population: jsonData.population,
               region: jsonData.region,
               subregion: jsonData.subregion,
               capital: jsonData.capital[0],
               tld: jsonData.tld,
-              currencies: jsonData.currencies,
+              currencies: Object.values(jsonData.currencies)[0].name,
               languages: Object.values(jsonData.languages),
-              flags: jsonData.flags
+              flags: jsonData.flags.png,
+              borders: jsonData.borders,
           })
         } catch (error) {
           console.error('Błąd:', error);
@@ -40,7 +40,7 @@ function FlagsSite({ match }) {
 
       fetchData();
   }, []);
-  console.log(countryData)
+  console.log(country)
 
   if (!country) {
         return (
@@ -56,9 +56,7 @@ function FlagsSite({ match }) {
           </div>
         )
     }
-  console.log(Object.values(country.currencies)[0].name)
-  const names = country.map(country => Object.values(country.languages))
-  const currencies = country.map(country => Object.values(country.currencies)[0].name);  
+
 
   
   const styleDark = dark ? { color: 'black' } : null;
@@ -72,14 +70,14 @@ function FlagsSite({ match }) {
         </Link>
         <div className='flags--Site'>
           
-            <img src={country.flags.png}/>
+            <img src={country.flags}/>
             <div className='body--flags--Site'>
-                <h2>{country.name.common}</h2>
+                <h2>{country.nameOfficial}</h2>
                 <div>
                     <section>
                       <span>
                         <h5 style={styleDark}>Native Name: </h5>
-                        <h6 style={styleDark}>{country.nativeName}</h6>
+                        <h6 style={styleDark}>{country.name}</h6>
                       </span>
                       <span>
                         <h5 style={styleDark}>Population:</h5>
@@ -101,21 +99,22 @@ function FlagsSite({ match }) {
                     <section >
                         <span>
                             <h5 style={styleDark}>Top Level Domain:</h5>
-                            <h6 style={styleDark}>{country.topLevelDomain}</h6>
+                            <h6 style={styleDark}>{country.tld}</h6>
                         </span>
                         <span>
                             <h5 style={styleDark}>Currencies:</h5>
-                            <h6 style={styleDark}>{currencies}</h6>
+                            <h6 style={styleDark}>{country.currencies}</h6>
                         </span>
                         <span>
                             <h5 style={styleDark}>Languages:</h5>
-                            <h6 style={styleDark}>{names}</h6>
+                            <h6 style={styleDark}>{Array.isArray(country.languages) ? country.languages.join(' ') : country.languages}</h6>
+
                         </span>
                     </section>
                 </div>
-                {borderNames.length > 0 && (
+                {country.borders.length > 0 && (
                 <section className='border--Bar' style={dark ? {color:'black'} : null}>
-                    Borders: {borderNames.map((borderName) => (
+                    Borders: {country.borders.map((borderName) => (
                     <div key={borderName} className="border-item" style={dark ? {backgroundColor:'white',color:'black'} : null}>
                         {borderName}
                     </div>
