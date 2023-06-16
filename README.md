@@ -2,6 +2,16 @@
 
 This is a responsive application that utilizes a REST API to display information about different countries. It is built using React.js, HTML, SCSS, and Redux. The project is set up with Vite and React, allowing for efficient development and hot module replacement. You can view the live preview of the project [here](https://beautiful-taffy-edb592.netlify.app/).
 
+## Screenshots
+
+![image](https://github.com/Bronze14/rest-api-countries/assets/76828789/1462e45e-32b3-4539-be28-f87b9c0a8dd9)
+
+![image](https://github.com/Bronze14/rest-api-countries/assets/76828789/efbec134-7693-4685-9091-4b6f3badbbe2)
+
+![image](https://github.com/Bronze14/rest-api-countries/assets/76828789/3e6aba2e-e873-4315-b958-a909b3ad2ba7)
+
+
+
 ## Prerequisites
 
 Before running the project, make sure you have the following dependencies installed:
