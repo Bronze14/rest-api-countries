@@ -57,8 +57,6 @@ function FlagsSite({ match }) {
         )
     }
 
-
-  
   const styleDark = dark ? { color: 'black' } : null;
   return (
     <div className='Flags--Site--Container' style={dark ? {backgroundColor:'white',color:'black'} : null}>

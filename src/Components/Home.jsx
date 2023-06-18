@@ -15,6 +15,8 @@ function Home() {
     const [visible, setVisible] = useState(false);
     const cartRef = useRef(null);
     const avatarRef = useRef(null);
+    const styleDark = dark ? { color: 'black' } : null;  
+
     useEffect(() => {
       const fetchData = async () => {
         try {
@@ -111,21 +113,23 @@ function Home() {
                                     setSelectedRegion(null);
                                     
                                     }} style={dark ? {color:'black'} : null}>World</button>
-                                <button class="menu-item" onClick={() => handleRegionSelect('Africa')} style={dark ? {color:'black'} : null}>Africa</button>
-                                <button class="menu-item" onClick={() => handleRegionSelect('Americas')} style={dark ? {color:'black'} : null}>America</button>
-                                <button class="menu-item" onClick={() => handleRegionSelect('Asia')} style={dark ? {color:'black'} : null}>Asia</button>
-                                <button class="menu-item" onClick={() => handleRegionSelect('Europe')} style={dark ? {color:'black'} : null}>Europe</button>
-                                <button class="menu-item" onClick={() => handleRegionSelect('Oceania')} style={dark ? {color:'black'} : null}>Oceania</button>
+                                <button class="menu-item" onClick={() => handleRegionSelect('Africa')} style={styleDark}>Africa</button>
+                                <button class="menu-item" onClick={() => handleRegionSelect('Americas')} style={styleDark}>America</button>
+                                <button class="menu-item" onClick={() => handleRegionSelect('Asia')} style={styleDark}>Asia</button>
+                                <button class="menu-item" onClick={() => handleRegionSelect('Europe')} style={styleDark}>Europe</button>
+                                <button class="menu-item" onClick={() => handleRegionSelect('Oceania')} style={styleDark}>Oceania</button>
                             </div>
 
                         ) : null }
                 </div>
             </section>
             <div className='flags--Container'>  
-                {filteredCountries.map((country, index) => {
-                if (selectedRegion === null || selectedRegion === country.region) {
+              {filteredCountries
+                .sort((a, b) => a.name.common.localeCompare(b.name.common))
+                .map((country, index) => {
+                  if (selectedRegion === null || selectedRegion === country.region) {
                     return (
-                    <Flags
+                      <Flags
                         key={country.cca3}
                         id={country.cca3}
                         name={country.name.common}
@@ -133,13 +137,14 @@ function Home() {
                         region={country.region}
                         capital={country.capital}
                         flag={country.flags.png}
-                    />
+                      />
                     );
-                } else {
-                return null;
-          }
-        })}
-      </div>
+                  } else {
+                    return null;
+                  }
+                })}
+            </div>
+
     </div>
     )
 }

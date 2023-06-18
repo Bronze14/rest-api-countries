@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 function Flags(props) {
   const {dark} = useSelector ((state) => state.cart)
-
+  const styleDark = dark ? { color: 'black' } : null;  
   return (
     
         <div className='flag--Cart' style={dark ? {backgroundColor:'white',color:'black'} : null}>
@@ -18,16 +18,16 @@ function Flags(props) {
                 <section>
                     <p>{props.name}</p>
                     <span >
-                        <h5 style={dark ? {color:'black'} : null}>Population: </h5>
-                        <h6 style={dark ? {color:'black'} : null}>{props.population}</h6> 
+                        <h5 style={styleDark}>Population: </h5>
+                        <h6 style={styleDark}>{props.population}</h6> 
                     </span>
                     <span>
-                        <h5 style={dark ? {color:'black'} : null}>Region: </h5>
-                        <h6 style={dark ? {color:'black'} : null}>{props.region}</h6>
+                        <h5 style={styleDark}>Region: </h5>
+                        <h6 style={styleDark}>{props.region}</h6>
                     </span>
                     <span>
-                        <h5 style={dark ? {color:'black'} : null}>Capital: </h5>
-                        <h6 style={dark ? {color:'black'} : null}>{props.capital}</h6> 
+                        <h5 style={styleDark}>Capital: </h5>
+                        <h6 style={styleDark}>{props.capital}</h6> 
                     </span>
                 </section>
                 
